@@ -1,10 +1,8 @@
 import telebot
 import os
 
-
 TOKEN = os.getenv("BOT_TOKEN")
-
-CHANNEL_ID = -1003607502652
+CHANNEL_ID = int(os.getenv("CHANNEL_ID")) 
 
 bot = telebot.TeleBot(TOKEN)
 

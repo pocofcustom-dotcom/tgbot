@@ -1,6 +1,9 @@
 import telebot
+import os
 
-TOKEN = "8138229793:AAHcWYOug4sB621euJ6QymW-ygYMWQNaISg"
+
+TOKEN = os.getenv("BOT_TOKEN")
+
 CHANNEL_ID = -1003607502652
 
 bot = telebot.TeleBot(TOKEN)
@@ -14,4 +17,4 @@ def forward_to_channel(message):
             message_id=message.message_id
         )
 
-bot.polling(none_stop=True)
+bot.infinity_polling()
